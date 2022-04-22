@@ -21,8 +21,11 @@
                 <td>{{row["title"]}}</td>
                 <td>{{row["rating"]}}</td>
                 <td>{{row["views"]}}</td>
-                <td>{{row["thumbnail"]}}</td>
-                <td>{{row["Videos"]}}</td>
+                <!-- <td>{{row["thumbnail"]}}</td> -->
+                <td><img src={{row["thumbnail"]}} style="float: left; margin-right: 10px;" /></td>
+                <td><img src=https://www.youtube.com/watch?v={{row["thumbnail"]}}
+                        style="float: left; margin-right: 10px;" /></td>
+                <!-- <td>{{row["youTubeId"]}}</td> -->
             </tr>
             {% endfor %}
         </tbody>
