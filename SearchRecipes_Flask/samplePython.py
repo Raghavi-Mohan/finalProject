@@ -11,8 +11,6 @@ def main():
 
     response = requests.request("GET", url, headers=headers, data=payload)
 
-    # print(response.text)
-
 
 if __name__ == "__main__":
     main()

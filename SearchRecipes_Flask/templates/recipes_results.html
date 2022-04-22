@@ -13,6 +13,7 @@
             <th>Rating</th>
             <th>Views</th>
             <th>Thumbnail</th>
+            <th>Videos</th>
         </tr>
         <tbody>
             {% for row in recipes %}
@@ -21,6 +22,7 @@
                 <td>{{row["rating"]}}</td>
                 <td>{{row["views"]}}</td>
                 <td>{{row["thumbnail"]}}</td>
+                <td>{{row["Videos"]}}</td>
             </tr>
             {% endfor %}
         </tbody>

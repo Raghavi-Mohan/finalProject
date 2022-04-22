@@ -23,15 +23,16 @@ def get_data(meal, include, exclude):
     payload = {}
     headers = {}
     """Make the api request using requests and .get method"""
-    response = requests.request("GET", url, headers=headers, data=payload)
+    response = requests.request(
+        "GET", url, headers=headers, data=payload).json()
 
     """ Save the response as a json file on the project"""
     # hint: use main_functions
 
     """Read the JSON file and save it to variable"""
     # hint: use main_functions
-    responseRecipes = main_functions.save_to_file(response.text, 'trial1')
+    responseRecipes = main_functions.save_to_file(response, 'food-recipes')
 
-    recipes = main_functions.read_from_file('trial1')
+    recipes = main_functions.read_from_file('food-recipes')
 
-    return json.loads(recipes)
+    return recipes
