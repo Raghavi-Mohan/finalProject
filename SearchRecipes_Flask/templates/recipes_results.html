@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Recipes</title>
+
+
 </head>
 
 <body>
@@ -23,8 +25,11 @@
                 <td>{{row["views"]}}</td>
                 <!-- <td>{{row["thumbnail"]}}</td> -->
                 <td><img src={{row["thumbnail"]}} style="float: left; margin-right: 10px;" /></td>
-                <td><img src=https://www.youtube.com/watch?v={{row["thumbnail"]}}
-                        style="float: left; margin-right: 10px;" /></td>
+                <td>
+                    <iframe width="560" height="315" src='https://www.youtube.com/embed/{{row["youTubeId"]}}'
+                        frameborder="0" allowfullscreen></iframe>
+
+                </td>
                 <!-- <td>{{row["youTubeId"]}}</td> -->
             </tr>
             {% endfor %}
